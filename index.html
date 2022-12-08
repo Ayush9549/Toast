@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="./assets/css/toast.css">
+	</head>
+	<body>
+		<div id="btns">
+			<button id="succes">Success Toast</button>
+			<button id="error">Error Toast</button>
+			<button id="info">Info Toast</button>
+			<button id="warning">Warning Toast</button>
+		</div>
+		<div id="toast_container">
+			<div id="toast_box1">
+				<img src="https://icons.veryicon.com/png/o/miscellaneous/management-system-icon-library/success-51.png" alt="">
+				<div id="text">
+					<h2>Success!</h2>
+					<p>Success is walking from failure With no loss of enthusiasm.</p>
+				</div>
+				<div id="toast_cross">X</div>
+				<div id="toast_bar">
+					<div id="bar" class="pbar"></div>
+				</div>
+			</div>
+			<!-- box2 Error -->
+			<div id="toast_box2">
+				<img src="https://www.freeiconspng.com/thumbs/close-icon/black-close-icon-3.png" alt="">
+				<div id="text">
+					<h2>Error!</h2>
+					<p>We come to learn that it does not pay to grieve too much over our errors.</p>
+				</div>
+				<div id="toast_cross1">X</div>
+				<div id="toast_bar">
+					<div id="bar1" class="pbar"></div>
+				</div>
+			</div>
+			<!-- box3 info -->
+			<div id="toast_box3">
+				<img src="https://www.svgrepo.com/show/24584/info-icon.svg" alt="">
+				<div id="text">
+					<h2>Info!</h2>
+					<p>In the age of technology there is constant access to vast amounts of information.</p>
+				</div>
+				<div id="toast_cross2">X</div>
+				<div id="toast_bar">
+					<div id="bar2" class="pbar"></div>
+				</div>
+			</div>
+			<!-- box4 Warning -->
+			<div id="toast_box4">
+				<img src="http://simpleicon.com/wp-content/uploads/warning.svg" alt="">
+				<div id="text">
+					<h2>Warning!</h2>
+					<p>Be careful what you, ask might get it .</p>
+				</div>
+				<div id="toast_cross3">X</div>
+				<div id="toast_bar">
+					<div id="bar3" class="pbar"></div>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.js"></script>
+		<script>
+
+			// function delete_item(id) {
+   //      		$("#ul_"+id).animate({width: "0%"},6000);
+			// 	setTimeout(function(){
+			// 		$("#box_"+id).remove();	
+			// 	}, 6000);
+			// };
+
+			$("#toast_cross").click(function(){
+				$("#toast_box1").hide();
+			});
+			$("#toast_cross1").click(function(){
+				$("#toast_box2").hide();
+			});
+			$("#toast_cross2").click(function(){
+				$("#toast_box3").hide();
+			});
+			$("#toast_cross3").click(function(){
+				$("#toast_box4").hide();
+			});
+			$("#succes").click(function(){
+			$("#toast_box1").appendTo(".boxs");
+				$("#toast_box1").css("display","flex");
+				barSlide();
+			});
+			$("#error").click(function(){
+				$("#toast_box2").appendTo(".boxs");
+				$("#toast_box2").css("display","flex");
+				barSlide1();
+			});
+			$("#info").click(function(){
+				$("#toast_box3").appendTo(".boxs");
+				$("#toast_box3").css("display","flex");
+				barSlide2();
+			});
+			
+			$("#warning").click(function(){
+				$("#toast_box4").appendTo(".boxs");
+				$("#toast_box4").css("display","flex");
+				barSlide3();
+			});
+			function barSlide()
+			{
+				setTimeout(function(){
+					$("#bar").css({
+						"width":"100%"
+					});
+					$("#bar1").css({
+						"width":"0%"
+					});
+					$("#bar2").css({
+						"width":"0%"
+					});
+					$("#bar3").css({
+						"width":"0%"
+					});
+				},500);
+			}
+			function barSlide1()
+			{
+				setTimeout(function(){
+					$("#bar").css({
+						"width":"0%"
+					});
+					$("#bar1").css({
+						"width":"100%"
+					});
+					$("#bar2").css({
+						"width":"0%"
+					});
+					$("#bar3").css({
+						"width":"0%"
+					});
+				},400);
+			}
+			function barSlide2()
+			{
+				setTimeout(function(){
+					$("#bar").css({
+						"width":"0%"
+					});
+					$("#bar1").css({
+						"width":"0%"
+					});
+					$("#bar2").css({
+						"width":"100%"
+					});
+					$("#bar3").css({
+						"width":"0%"
+					});
+				},500);
+			}
+			function barSlide3()
+			{
+				setTimeout(function(){
+					$("#bar").css({
+						"width":"0%"
+					});
+					$("#bar1").css({
+						"width":"0%"
+					});
+					$("#bar2").css({
+						"width":"0%"
+					});
+					$("#bar3").css({
+						"width":"100%"
+					});
+				},500);
+			}
+		</script>
+	</body>
+</html>
